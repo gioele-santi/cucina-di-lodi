@@ -1,0 +1,35 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               La Cucina di Lodi
+title-img:           /img/title.png
+tagline:             'Pensieri, ricette...'
+description:         'Una raccolta di ricette, consigli, trucchi, per gustarsi i frutti della natura e cucinare in modo sicuro e salutare.'
+url:                 '' #http://lanyon.getpoole.com
+baseurl:             ''
+
+paginate:            4
+paginate_path: "/:num/"
+excerpt_separator: <!--continua-->
+
+# About/contact
+author:
+  name:              Gigliola Marzi
+  url:               https://twitter.com/mdo
+  email:             cucina.di.lodi@gmail.com
+
+# Custom vars
+version:             1.0.0
+
+theme: jekyll-paginate
+gems:
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .git
+  - .gitignore

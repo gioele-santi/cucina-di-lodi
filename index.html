@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+        <!-- <a href="{{ site.baseurl }}/{{ post.url }}"> -->
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.excerpt }}  
+    <a class="continue-button" href="{{ post.url }}">Continua a leggere</a>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{paginator.next_page_path}}">Precedenti</a>
+  {% else %}
+    <span class="pagination-item older">Precedenti</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Recenti</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{paginator.previous_page_path}}">Recenti</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Recenti</span>
+  {% endif %}
+</div>
+

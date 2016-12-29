@@ -25,7 +25,7 @@ author:
 # Custom vars
 version:             1.0.0
 
-theme: jekyll-paginate
+theme: jekyll-theme-lanyon #jekyll-paginate
 gems:
   - jekyll-paginate
 exclude:

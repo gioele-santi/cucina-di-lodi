@@ -25,6 +25,10 @@ author:
 # Custom vars
 version:             1.0.0
 
+collections:
+    pasta:
+    
+
 theme: jekyll-theme-lanyon #jekyll-paginate
 gems:
   - jekyll-paginate

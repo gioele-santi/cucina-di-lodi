@@ -2,21 +2,43 @@
 layout: default
 ---
 
+{% comment %} Generate localized date {% endcomment %}
+{% assign months = "Gennaio|Febbraio|Marzo|Aprile|Maggio|Giugno|Luglio|Agosto|Settembre|Ottobre|Novembre|Dicembre" | split: "|" %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+{% assign day = page.date | date: "%d" %}
+{% assign month = months[m] %}
+{% assign year = page.date | date: "%Y" %}
+
+
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
+  <span class="post-date">Pubblicato il {{ day }} {{ month }} {{ year }}</span>
+  {% if page.images[0] != null %}
+    <!-- Immagine inserita -->
+    {% assign image = page.images[0] %}
+    <img src="{{ image.url }}" alt="{{ image.alt }}">
+  {% else %}
+    <!-- Se più immagini presenti, provare a fare una galleria -->
+    <!-- Immagine assente -->
+  {% endif %}
   {{ content }}
 </div>
 
 <div class="related">
-  <h2>Related Posts</h2>
+  <h2>Post recenti</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
+              
+                {% assign m = post.date | date: "%-m" | minus: 1 %}
+                {% assign day = post.date | date: "%d" %}
+                {% assign month = months[m] %}
+                {% assign year = post.date | date: "%Y" %}
+              
+            <small>{{ day }} {{ month }} {{ year }}</small>
           </a>
         </h3>
       </li>

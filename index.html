@@ -3,6 +3,9 @@ layout: default
 title: Home
 ---
 
+{% comment %} Generate localized date {% endcomment %}
+{% assign months = "Gennaio|Febbraio|Marzo|Aprile|Maggio|Giugno|Luglio|Agosto|Settembre|Ottobre|Novembre|Dicembre" | split: "|" %}
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -13,8 +16,20 @@ title: Home
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
+        {% assign m = post.date | date: "%-m" | minus: 1 %}
+        {% assign day = post.date | date: "%d" %}
+        {% assign month = months[m] %}
+        {% assign year = post.date | date: "%Y" %}
+      
+    <span class="post-date">Pubblicato il {{ day }} {{ month }} {{ year }}</span>
+    
+    {% if post.images[0] != null %}
+        {% assign image = post.images[0] %}
+        <img src="{{ image.url }}" alt="{{ image.alt }}">
+    {% else %}
+        <!-- Immagine assente -->
+    {% endif %}
+      
     {{ post.excerpt }}  
     <a class="continue-button" href="{{ post.url }}">Continua a leggere</a>
   </div>

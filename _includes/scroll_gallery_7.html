@@ -1,0 +1,17 @@
+<div id="photobanner_container">
+    <div class="photobanner">
+    	{% for image in page.images %}
+            {% if forloop.first == true %}
+                <img class="photobanner_first"
+            {% else %}
+                <img
+            {% endif %}
+            src="{{ image.url }}" alt="{{ image.alt}}"/>
+        {% endfor %}
+        {% for image in page.images %}
+            {% if forloop.index0 <= 4 %}
+            <img src="{{ image.url }}" alt="{{ image.alt}}"/>
+            {% endif %}
+        {% endfor %}
+        </div>
+</div>

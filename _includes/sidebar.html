@@ -7,7 +7,7 @@
   <div class="sidebar-item">
     <p>{{ site.description }}</p>
   </div>
-
+    
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
 
@@ -30,6 +30,17 @@
     <!--<span class="sidebar-nav-item">Versione {{ site.version }}</span>-->
   </nav>
 
+  <!-- Social icons (connect to config file vars) -->
+  <div  id="social" > <!--class="sidebar-item"-->
+      <ul class="contact">
+          <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+          <li><a href="#" class="icon icon-facebook"><span></span></a></li>
+          <!--<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>-->
+          <li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+          <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+      </ul>
+  </div>
+    
   <div class="sidebar-item">
     <p>
       &copy; 1987 - {{ site.time | date: '%Y' }}. Tutti i diritti riservati.

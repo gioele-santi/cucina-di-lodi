@@ -1,0 +1,163 @@
+/*Social icons have less margin bottom (Gioele)*/
+#social {
+    padding: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Title logo image used in pages - adjust margin bottom for better spacing (Gioele) */
+#title_logo {
+    margin-bottom: 4em;
+}
+
+/* Shadow for posts in main blog page */
+.posts .post { /* only in post list (Gioele) */
+    margin-bottom: 2em;
+    padding: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
+}
+
+/* LODI (Gioele) */
+.theme-base-lodi .sidebar,
+.theme-base-lodi .sidebar-toggle:active,
+.theme-base-lodi #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #2D823B;
+}
+.theme-base-lodi .container a,
+.theme-base-lodi .sidebar-toggle,
+.theme-base-lodi .related-posts li a:hover {
+  color: #2D823B;
+    text-decoration: none;
+}
+
+.theme-base-lodi .container .continue-button {
+    background-color:  #2D823B;
+    color: white;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    padding: 0.5em;
+    font-size: 75%;
+}
+
+.theme-base-lodi .container .continue-button:hover {
+     text-decoration: none;
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
+
+/*Social Contacts (Gioele*/
+
+ul.contact
+{
+    margin: 0;
+    padding: 0em 0em 0em 0em;
+    list-style: none;
+}
+	
+ul.contact li
+{
+	display: inline-block;
+	padding: 0em 0.10em;
+	font-size: 1em;
+}
+	
+ul.contact li span
+{
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+	
+ul.contact li a
+{
+}
+	
+ul.contact li a:before
+{
+    display: inline-block;
+	background: none;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: rgba(255,255,255,1);
+}
+
+/* Animated photo gallery (Gioele) */
+#photobanner_container {
+	height: 233px;
+    width: 700px;
+	overflow: hidden;
+	margin: 50px auto;
+	background: white;
+}
+
+.photobanner {
+	height: 233px;
+	width: 3550px;
+	margin-bottom: 80px;
+}
+
+.photobanner img {
+    height: 233px;
+    width: 350px;
+    display: inline-block;
+}
+
+.photobanner_first {
+	-webkit-animation: bannermove 30s linear infinite;
+	   -moz-animation: bannermove 30s linear infinite;
+	    -ms-animation: bannermove 30s linear infinite;
+	     -o-animation: bannermove 30s linear infinite;
+	        animation: bannermove 30s linear infinite;
+}
+ 
+@keyframes "bannermove" {
+ 0% {
+    margin-left: 0px;
+ }
+ 100% {
+    margin-left: -2485px;
+ }
+ 
+}
+ 
+@-moz-keyframes bannermove {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2485px;
+ }
+ 
+}
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2485px;
+ }
+ 
+}
+ 
+@-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2485px;
+ }
+ 
+}
+ 
+@-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2485px;
+ }
+ 
+}

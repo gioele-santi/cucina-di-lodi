@@ -3,6 +3,12 @@ layout: default
 ---
 
 <div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
+    
+  {% if page.title_logo != null %}
+    <img id="title_logo" src="{{ page.title_logo }}" alt="{{ page.title }}">
+  {% else %}
+    <h1 class="page-title">{{ page.title }}</h1>
+  {% endif %}
+
   {{ content }}
 </div>

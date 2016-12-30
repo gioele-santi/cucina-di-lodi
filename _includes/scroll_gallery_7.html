@@ -8,8 +8,13 @@
             {% endif %}
             src="{{ image.url }}" alt="{{ image.alt}}"/>
         {% endfor %}
+        
+        {% comment %}
+            Repeat first 2 images so that 1st and last frame are the same.
+        {% endcomment %}
+        
         {% for image in page.images %}
-            {% if forloop.index0 <= 4 %}
+            {% if forloop.index0 <= 2 %}
             <img src="{{ image.url }}" alt="{{ image.alt}}"/>
             {% endif %}
         {% endfor %}

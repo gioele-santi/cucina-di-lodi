@@ -38,13 +38,18 @@ title: Home
             {% endfor %}
             </span>
         {% endif %}
+        
     </p>
+    
     
     {% if post.images[0] != null %}
         {% assign image = post.images[0] %}
         <div class="img_crop">
             <img src="{{ image.url }}" alt="{{ image.alt }}">
         </div>
+        
+    {% else %}
+        <!-- Immagine assente -->
     {% endif %}
       
     {{ post.excerpt }}  

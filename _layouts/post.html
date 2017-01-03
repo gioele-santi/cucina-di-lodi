@@ -12,7 +12,23 @@ layout: default
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">Pubblicato il {{ day }} {{ month }} {{ year }}</span>
+  <p><span class="post-date post-description">Pubblicato il {{ day }} {{ month }} {{ year }}
+      {% if page.categories[0] != null %} &nbsp in: &nbsp
+            {% for category in page.categories %}
+                <a class="category-button" href="">{{ category }}</a>
+            {% endfor %}
+        {% endif %}
+    </span>
+    
+    {% if page.tags[0] != null %}
+        <span class="post-description"><span class="icon icon-tags"></span>&nbsp 
+            {% for tag in page.tags %}
+                <a class="tag-button" href="">{{ tag }}</a>
+            {% endfor %}
+            </span>
+    {% endif %}
+    </p>
+    
   {% if page.images[0] != null %}
     <!-- Immagine inserita -->
     {% assign image = page.images[0] %}
@@ -23,6 +39,8 @@ layout: default
   {% endif %}
   {{ content }}
 </div>
+
+{% include share-page.html %}
 
 <div class="related">
   <h2>Post recenti</h2>

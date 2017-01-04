@@ -6,7 +6,7 @@
   /*background-color: #202020;*/
 }
 
-@media (min-width: 69.5em) { /*1110px*/
+@media (min-width: 64em) { /* 69.5em 1110px*/
     
     .container {
         width: 67%;

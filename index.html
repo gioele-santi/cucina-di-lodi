@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: extra-column
 title: Home
 ---
 
@@ -49,6 +49,12 @@ title: Home
       
     {{ post.excerpt }}  
     <a class="continue-button" href="{{ post.url }}">Continua a leggere</a>
+      
+    {% unless forloop.last == true %}
+      
+      {% include separator.html %}
+    {% endunless %}
+      
   </div>
   {% endfor %}
 </div>

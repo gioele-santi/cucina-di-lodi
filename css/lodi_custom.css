@@ -11,14 +11,15 @@
 }
 
 /* Shadow for posts in main blog page */
-.posts .post { /* only in post list (Gioele) */
+/*
+.posts .post{
     margin-bottom: 2em;
     padding: 2em;
      -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important
    
-}
+} */
 
 /* LODI (Gioele) */
 .theme-base-lodi .sidebar,
@@ -59,9 +60,10 @@
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
 
-.theme-base-lodi .container .category-button {
+.category-button {
+    font-style: italic;
     background-color:  #B9563B;
-    color: white;
+    color: white !important;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
@@ -70,17 +72,19 @@
     padding-top: 0.1em;
     padding-bottom: 0.1em;
     margin-right: 0.2em;
+    white-space: nowrap;
     /*font-size: 70%;*/
 }
 
-.theme-base-lodi .container .category-button:hover {
+.category-button:hover {
      text-decoration: none;
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
 
-.theme-base-lodi .container .tag-button {
+.tag-button {
+    font-style: italic;
     background-color:  #dec715; /*#B27F1D*/
-    color: white;
+    color: white !important;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
@@ -89,10 +93,11 @@
     padding-top: 0.1em;
     padding-bottom: 0.1em;
     margin-right: 0.2em;
+    white-space: nowrap;
     /*font-size: 70%;*/
 }
 
-.theme-base-lodi .container .tag-button:hover {
+.tag-button:hover {
      text-decoration: none;
     box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
@@ -136,6 +141,16 @@ ul.contact li a:before
 }
 
 /* Post image in main blog page (crop) */
+
+.img_crop {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+     -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
 .img_crop {
     width: 100%;
     max-height: 200px;
@@ -186,8 +201,6 @@ ul.contact li a:before
 .share-page .icon-google-plus-sign {
     color: #dd4b39 !important;
 }
-
-
 
 /* Animated photo gallery (Gioele) */
 #photobanner_container {

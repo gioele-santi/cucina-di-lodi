@@ -1,3 +1,9 @@
+@media (max-width: 32em) { /* Title is not covered by menu button on small screens. */
+    .masthead-title {
+        margin-left: 2em;
+    }
+}
+
 /*Social icons have less margin bottom (Gioele)*/
 #social {
     padding: 1rem;

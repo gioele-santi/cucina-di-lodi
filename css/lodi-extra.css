@@ -6,7 +6,7 @@
   /*background-color: #202020;*/
 }
 
-@media (min-width: 64em) { /* 69.5em 1110px*/
+@media (min-width: 64em) {/* 65em is more than tablet landscape, use for 1st post highlight*/
     
     .container {
         width: 67%;
@@ -43,12 +43,4 @@
     margin-left: 8%;
     margin-right: 8%;
     
-/*
-    padding-bottom: 1.5em;
-    margin-bottom: 0.5em;
-    border-width: 0.1em;
-    border-bottom-color: #9a9a9a;
-    border-style: none;
-    border-bottom-style: dashed;
-*/
 }

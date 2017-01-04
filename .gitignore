@@ -6,4 +6,4 @@ _site
 # I will add a new folder for site editor added images separated from img
 # so images uploaded by editor will be separated from the ones used in layout.
 # The same will be for collections and data folders in future.
-_posts/*
+#_posts/*

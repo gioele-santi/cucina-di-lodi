@@ -34,5 +34,6 @@ The purpose of this snippet is to list all the categories you have in your site.
 {% endcomment %}
 <!-- CHECK -->
 {% for category in cats %}
-	<a class="category-button" href="#{{ category | slugify }}"> {{ category }} </a>
+	<a class="category-button" href="{{ site.baseurl }}/category/#{{ category | slugify }}"> {{ category }} </a>
 {% endfor %}
+    <a href="{{ site.baseurl }}/category/#no-category" class="category-button" > nessuna categoria </a>

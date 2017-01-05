@@ -1,33 +1,15 @@
 ---
-layout: extra-column
+layout: blog-column
 ---
 
 {% comment %} Generate localized date {% endcomment %}
 {% assign months = "Gennaio|Febbraio|Marzo|Aprile|Maggio|Giugno|Luglio|Agosto|Settembre|Ottobre|Novembre|Dicembre" | split: "|" %}
-{% assign m = page.date | date: "%-m" | minus: 1 %}
-{% assign day = page.date | date: "%d" %}
-{% assign month = months[m] %}
-{% assign year = page.date | date: "%Y" %}
 
 
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <p><span class="post-date post-description">Pubblicato il {{ day }} {{ month }} {{ year }}
-      {% if page.categories[0] != null %} &nbsp in: &nbsp
-            {% for category in page.categories %}
-                <a class="category-button" href="">{{ category }}</a>
-            {% endfor %}
-        {% endif %}
-    </span>
-    
-    {% if page.tags[0] != null %}
-        <span class="post-description"><span class="icon icon-tags"></span>&nbsp 
-            {% for tag in page.tags %}
-                <a class="tag-button" href="">{{ tag }}</a>
-            {% endfor %}
-            </span>
-    {% endif %}
-    </p>
+
+    {% include post-descriptor.html %}
     
   {% if page.images[0] != null %}
     <!-- Immagine inserita -->
@@ -56,7 +38,7 @@ layout: extra-column
                 {% assign month = months[m] %}
                 {% assign year = post.date | date: "%Y" %}
               
-            <small>{{ day }} {{ month }} {{ year }}</small>
+            <small class="post-date post-description">Pubblicato il {{ day }} {{ month }} {{ year }}</small>
           </a>
         </h3>
       </li>

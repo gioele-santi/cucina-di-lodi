@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  {% include head-extra.html %}
+  {% include head-blog.html %}
     {% comment %}
-        use different head that includes a custom css for hyde bar and overrides lanyon content
+        use different head that includes a custom css for blog bar and overrides lanyon content
         margins and locations
     {% endcomment %}
 
@@ -30,8 +30,8 @@
         {{ content }}
       </div>
     
-        <div class="hydebar">
-            {% include hydebar.html %}
+        <div class="right-blog-column">
+            {% include right-blog-column.html %}
         </div>
         
     </div>

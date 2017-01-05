@@ -1,0 +1,40 @@
+---
+layout: default
+title: Tag
+---
+
+{% comment %} Generate localized date {% endcomment %}
+{% assign months = "Gennaio|Febbraio|Marzo|Aprile|Maggio|Giugno|Luglio|Agosto|Settembre|Ottobre|Novembre|Dicembre" | split: "|" %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+{% assign day = page.date | date: "%d" %}
+{% assign month = months[m] %}
+{% assign year = page.date | date: "%Y" %}
+
+
+
+{% include tag-list.html %}
+{% include separator.html %}
+
+{% for tag in tags %}
+	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+	<ul>
+	 {% for post in site.posts %}
+		 {% if post.tags contains tag %}
+		 <li>
+		      <h3>
+		          <a href="{{ site.baseurl }}{{ post.url }}">
+                    {{ post.title }}
+              
+                    {% assign m = post.date | date: "%-m" | minus: 1 %}
+                    {% assign day = post.date | date: "%d" %}
+                    {% assign month = months[m] %}
+                    {% assign year = post.date | date: "%Y" %}
+              
+                    <small class="post-date post-description">Pubblicato il {{ day }} {{ month }} {{ year }}</small>
+                    </a>
+		      </h3>
+		 </li>
+		 {% endif %}
+	 {% endfor %}
+	</ul>
+{% endfor %}

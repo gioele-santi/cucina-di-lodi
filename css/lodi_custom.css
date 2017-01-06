@@ -1,4 +1,5 @@
-@media (max-width: 32em) { /* Title is not covered by menu button on small screens. */
+/* Title is not covered by menu button on small screens. */
+@media (max-width: 32em) { 
     .masthead-title {
         margin-left: 2em;
     }
@@ -207,6 +208,8 @@ ul.contact li a:before
 .share-page .icon-google-plus-sign {
     color: #dd4b39 !important;
 }
+
+/* Expandable category and tag lists */
 
 /* Animated photo gallery (Gioele) */
 #photobanner_container {

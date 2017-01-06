@@ -2,10 +2,6 @@
 layout: blog-column
 ---
 
-{% comment %} Generate localized date {% endcomment %}
-{% assign months = "Gennaio|Febbraio|Marzo|Aprile|Maggio|Giugno|Luglio|Agosto|Settembre|Ottobre|Novembre|Dicembre" | split: "|" %}
-
-
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
 
@@ -29,18 +25,7 @@ layout: blog-column
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-              
-                {% assign m = post.date | date: "%-m" | minus: 1 %}
-                {% assign day = post.date | date: "%d" %}
-                {% assign month = months[m] %}
-                {% assign year = post.date | date: "%Y" %}
-              
-            <small class="post-date post-description">Pubblicato il {{ day }} {{ month }} {{ year }}</small>
-          </a>
-        </h3>
+        {% include post-descriptor-short.html %}
       </li>
     {% endfor %}
   </ul>

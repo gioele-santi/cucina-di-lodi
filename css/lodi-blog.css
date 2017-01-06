@@ -10,10 +10,20 @@
     
     .container {
         width: 67%;
+        
     }
     
     .content { /* Move content on the left (makes space for extra column) */
-    margin-left: 0 !important;
+        margin-left: 0 !important;
+        padding-bottom: 8em !important; /* avoid white over right column when expandable cells are used*/
+    }
+    
+    .content p {
+        margin-left: 2em;
+    }
+    
+    .content .page-title {
+        margin-left: 1em;
     }
     
     .content .post {

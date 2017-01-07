@@ -15,7 +15,7 @@
     
     .content { /* Move content on the left (makes space for extra column) */
         margin-left: 0 !important;
-        padding-bottom: 8em !important; /* avoid white over right column when expandable cells are used*/
+        padding-bottom: 15em !important; /* avoid white over right column when expandable cells are used*/
     }
     
     .content .page-title {

@@ -15,14 +15,14 @@ title: Tag
 <ul class="expandable"> <!-- Tag post list -->
     {% for tag in tags %}
     
-    <li class="expandable">
+    <li class="expandable super-item" id="{{ tag | slugify }}_super">
         <input class="expandable" type="checkbox" id="{{ tag | slugify }}_exp"><label class="expandable" for="{{ tag | slugify }}_exp"> </label>
         <h2 class="expandable" id="{{ tag | slugify }}">{{ tag }}</h2>
         
         <ul class="expandable">
             {% for post in site.posts %}
                 {% if post.tags contains tag %}
-                    <li class="expandable">
+                    <li class="expandable sub-item">
                             {% include post-descriptor-short.html %}
                     </li>
                 {% endif %}
@@ -35,7 +35,4 @@ title: Tag
 
 </ul>
 
-<script>
-    var selectedTag = window.location.hash.substr(1);
-    document.getElementById(selectedTag+"_exp").checked = true;
-</script>
+{% include tag-cat-link-script.html %}

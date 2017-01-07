@@ -34,3 +34,8 @@ title: Tag
 {% endfor %}  
 
 </ul>
+
+<script>
+    var selectedTag = window.location.hash.substr(1);
+    document.getElementById(selectedTag+"_exp").checked = true;
+</script>

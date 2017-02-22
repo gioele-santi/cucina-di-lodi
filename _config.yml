@@ -29,7 +29,7 @@ collections:
     pasta:
     
 
-theme: #jekyll-theme-lanyon #jekyll-paginate
+theme: jekyll-theme-lanyon #jekyll-paginate
 gems:
   - jekyll-feed
   - jekyll-paginate
